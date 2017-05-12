@@ -1,10 +1,10 @@
-<view class="title">
+<view class="title" bindtap="search">
   <image src="{{imgUrl}}"/>
   <text>{{name}}</text>
 </view>
 
 <view class="search">
-        <input id="search_value" type="text" placeholder="搜索当前规范"></input>
+	<input type="text" value="{{search_value}}" bindinput="bindSearch" placeholder="搜索当前规范"></input>
 </view>
 
 <view class="fenge"></view>

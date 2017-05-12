@@ -5,16 +5,33 @@ Page({
   data:{ 
     allData:{},
     id:0,
-    name:"国家规范-建筑专业",
-    imgUrl:"../../../images/lunbo.jpg"
+    search_value:""
   },
 	onTapToItem:function(event) {
     var id = event.currentTarget.id;
     console.log(id);
-	console.log(this.data.alldata);
+		console.log(this.data.alldata);
     wx.navigateTo({
       url: 'lmitem/lmitem?id=' + id,
     })
+  },
+	bindSearch:function(event) {
+		var that = this;
+		var search_value = event.detail.value;
+		that.setData({ search_value: search_value });
+		console.log(that.data.search_value);
+  },
+  search:function(){
+  	var that = this;
+  	var data = {
+  		value:that.data.search_value
+  	};
+		request.request('norm/search', 'GET', data, function(res) {//获取规范列表接口
+			console.log(res);
+			that.setData({
+				allData: res
+			});
+		});
   },
   onLoad: function(options) {
     var that = this;

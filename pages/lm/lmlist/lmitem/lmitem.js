@@ -8,16 +8,16 @@ Page({
     id:0
   },
   onLoad: function(options) {
-  	console.log(12313);
-  	var that = this;  
-
     var that = this;
 		request.request('norm/id/'+options.id, 'GET', {}, function(res) {//获取规范列表接口
 			console.log(res);
-			that.setData({
-				allData: res
-			});
-			WxParse.wxParse('article', 'html', res.content, that,5);
+			if(res && res.content){
+				that.setData({
+					allData: res
+				});
+				WxParse.wxParse('article', 'html', res.content, that,5);
+			}
+			
 		});
 		
 /**	var article = '<div>我是HTML代码</div>';  
