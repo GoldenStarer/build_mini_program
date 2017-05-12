@@ -17,10 +17,10 @@
 
 <!--用name 定义模版-->  
 <template name="msgTemp">  
-<navigator class="guifan-item" url="{{url}}">  
+<view catchtap="onTapToItem" id="{{_id}}" class="guifan-item" url="../lm/lmlist/lmitem/lmitem">  
     <view class="guifan-title">{{name}}</view>  
     <view class="guifan-bianhao">编号：{{number}}</view>
-</navigator>  
+</view>  
 </template>
   
 <view wx:for="{{msgList}}" wx:key="">  

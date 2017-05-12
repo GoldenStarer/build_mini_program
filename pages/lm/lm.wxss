@@ -6,9 +6,10 @@
     flex-direction: row; 
     background-color: #eee;
     /*border: ;*/
+    border-top: 1rpx solid #eee;
 } 
 .tab-left{ 
-    width: 35%;
+    width: 36%;
     height: 100%;
     background-color: #eee;
     position: fixed;
@@ -16,7 +17,7 @@
 .tab-left .left-item{     
     color:#aaa;
     background-color: #eee;
-    line-height: 260%; 
+    line-height: 320%; 
     font-size: 28rpx;
     text-align: center;
 } 
@@ -44,9 +45,9 @@
     background-color: #ccc; 
 }
 .tab-right{ 
-    width: 65%; 
+    width: 64%; 
     position: absolute;
-    left: 35%;
+    left: 36%;
 } 
 .tab-right .right-item{
     display: none;  

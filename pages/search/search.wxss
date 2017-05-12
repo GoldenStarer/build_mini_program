@@ -22,7 +22,7 @@
     height: 64rpx;
     line-height: 64rpx;
     margin: 0 auto;
-    border: ;
+    /*border: ;*/
     font-size: 28rpx;
     text-indent: 185rpx;
 }

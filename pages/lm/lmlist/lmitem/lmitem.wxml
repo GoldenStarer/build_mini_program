@@ -1,9 +1,11 @@
 <import src="../../../../wxParse/wxParse.wxml"/> 
 <view class="jianzhu">
 
-<navigator class="item" url="{{url}}">  
+<view class="item">  
     <view class="">{{allData.title}}</view>  
-</navigator>  
-<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>  
+<view class="item_cont">
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
 
 </view> 

@@ -15,6 +15,14 @@ Page({
 		searchValue:"",
 		msgList: []
 	},
+  onTapToItem: function (event) {
+    var id = event.currentTarget.id;
+    console.log(id);
+    console.log(this.data.alldata);
+    wx.navigateTo({
+      url: '../lm/lmlist/lmitem/lmitem?id=' + id,
+    })
+  },
 	dataChange: function(e) {//搜索输入监听
 		let that = this;
 		let searchValue = e.detail.value;

@@ -12,14 +12,14 @@
 	<view class="tab-right"> 
 		<view wx:for="{{allData}}" wx:key="" wx:for-item="item1" wx:for-index="id" >
 			<view wx-if="{{id!=1}}" wx:for="{{item1.list}}" class="right-item {{tabArr.curHdIndex==id? 'active' : ''}}" wx:key="" wx:for-item="item">
-				<view catchtap="onTapToDetail" data-post-id="{{item.id}}" class="ri-item" style="background: url({{item.img?item.img:'../../images/lunbo.jpg'}}) no-repeat;background-size: 100%;">
+				<view catchtap="onTapToDetail" id="{{item._id}}" class="ri-item" style="background: url({{item.img?item.img:'../../images/lunbo.jpg'}}) no-repeat;background-size: 100% 100%;">
 				{{item.name}}
 				</view>
 			</view>
-			<view wx-if="{{id==1}}" wx:for="{{item1.list}}" class="right-item {{tabArr.curHdIndex=='1'? 'active' : ''}}" wx:key="item">
-				<navigator url="xmlist/xmlist" class="ri-item-diqu" style="background: url({{item.img?item.img:'../../images/lunbo.jpg'}}) no-repeat;background-size: auto;">
+			<view wx-if="{{id==1}}" wx:for="{{item1.list}}" class="right-item {{tabArr.curHdIndex=='1'? 'active' : ''}}" wx:key="" wx:for-item="item">
+				<view catchtap="onTapToDetail" id="{{item._id}}" class="ri-item-diqu" style="background: url({{item.img?item.img:'../../images/lunbo.jpg'}}) no-repeat;background-size: 100% 100%;">
 				{{item.name}}
-				</navigator>
+				</view>
 			</view>
 		</view>
 	</view>

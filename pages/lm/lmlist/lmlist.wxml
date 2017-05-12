@@ -1,9 +1,10 @@
-<view class="title" bindtap="search">
+<view class="title">
   <image src="{{imgUrl}}"/>
   <text>{{name}}</text>
 </view>
 
-<view class="search">
+<view class="search" bindtap="search">
+  <icon type="search" color="#898989" size="12"></icon>
 	<input type="text" value="{{search_value}}" bindinput="bindSearch" placeholder="搜索当前规范"></input>
 </view>
 

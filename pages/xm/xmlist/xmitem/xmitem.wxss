@@ -1,4 +1,4 @@
-/* pages/lm/lmlist/lmitem/lmitem.wxss */
+@import "../../../../wxParse/wxParse.wxss";
 .jianzhu{
     background-color: #eee;
 }
@@ -10,4 +10,11 @@
     font-weight: bold;
     margin: 0 auto;
     border-bottom: 1rpx solid #ccc;
+}
+.item_cont{
+  width: 90%;
+  line-height: 40rpx;
+  color: #666;
+  font-size: 28rpx;
+  margin: 20rpx auto;
 }
