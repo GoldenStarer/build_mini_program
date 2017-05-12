@@ -24,9 +24,10 @@ Page({
   search:function(){
   	var that = this;
   	var data = {
-  		value:that.data.search_value
+  		value:that.data.search_value,
+  		pid:that.data.id
   	};
-		request.request('norm/search', 'GET', data, function(res) {//获取规范列表接口
+		request.request('norm/search', 'GET', data, function(res) {
 			console.log(res);
 			that.setData({
 				allData: res
@@ -35,6 +36,7 @@ Page({
   },
   onLoad: function(options) {
     var that = this;
+    that.setData({ id: options.id });
 		request.request('industry/id/'+options.id, 'GET', {}, function(res) {//获取规范列表接口
 			console.log(res);
 			that.setData({
