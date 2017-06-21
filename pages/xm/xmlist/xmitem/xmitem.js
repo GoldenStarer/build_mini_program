@@ -9,13 +9,12 @@ Page({
   },
   onLoad: function(options) {
     var that = this;
-		request.request('norm/id/'+options.id, 'GET', {}, function(res) {//获取规范列表接口
+		request.request('unit/id/'+options.id, 'GET', {}, function(res) {//获取规范列表接口
 			console.log(res);
-			if(res && res.content){
+			if(res){
 				that.setData({
 					allData: res
 				});
-				WxParse.wxParse('article', 'html', res.content, that,5);
 			}
 			
 		});

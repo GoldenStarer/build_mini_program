@@ -1,6 +1,6 @@
 "use strict"
 
-var server = 'chy',
+var server = '',
 	accessToken = '',
 	userInfo = {},
 	systemInfo = {};
@@ -17,7 +17,7 @@ function getServerUrl(route) {
 			url = `http://localhost:3000/${route}`;
 			break;
 		default:
-			url = `https://test.zhongan.com/${route}`;
+			url = `https://www.chenhaoye.cn/${route}`;
 			break;
 	}
 	return url;

@@ -58,14 +58,6 @@
     text-align: center;
     color: #fff;
 } 
-.tab-right .right-item .ri-item-diqu{
-    width: 50%;
-    float: left;
-    font-weight:bold;
-    line-height: 500%;
-    text-align: center;
-    color: #fff;
-}
 .tab-right .right-item.active{ 
     display: block; 
 }

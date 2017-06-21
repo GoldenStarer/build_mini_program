@@ -15,8 +15,8 @@
 <!--用name 定义模版-->  
 <template name="msgTemp">  
 <view catchtap="onTapToItem" id="{{_id}}" class="guifan-item" url="lmitem/lmitem">  
-    <view class="guifan-title">{{name}}</view>  
-    <view class="guifan-bianhao">编号：{{number}}</view>
+    <view class="guifan-title">{{title}}</view>  
+    <view class="guifan-bianhao">项目主体：{{declaration}}</view>
 </view>  
 </template>
   
